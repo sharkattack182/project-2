@@ -64,7 +64,29 @@
                 after
           </div>
 
-          
+          .pokeball:before,
+          .pokeball:after {
+              content:"";
+              position: absolute;
+               {
+                .pokeball:before {
+                    background: red;
+                    width: 100%;
+                    height: 50%;
+                  }
+
+                  .pokeball:after {
+                      top: calc(50% - 5px);
+                      width: 100%;
+                      height: 10px;
+                    background: #000;    
+                              }
+              }
+
+             
+          }
+
+
 
     </body>
 </html>
