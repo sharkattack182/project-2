@@ -1,8 +1,8 @@
 // Requiring our models and passport as we've configured it
 const axios = require("axios");
 
-const db = require("../models");
-const passport = require("../config/passport");
+// const db = require("../models");
+// const passport = require("../config/passport");
 
 module.exports = function(app) {
   app.get("/api/:pokemon", (req, res) => {
