@@ -6,6 +6,20 @@ body{
     align-items: center;
     }
 
+    img{
+        position: relative;
+        top: -82px;
+    }
+    
+    p{
+       position: relative;
+       top: 9rem;
+       font-size: 28px;
+       font-weight: 900;
+       letter-spacing: -2px;
+    }
+    
+
     .child-to-body{
         width: 300px;
         height: 400px;
@@ -29,7 +43,7 @@ body{
         border-radius: 50%;
         overflow: hidden;
         box-shadow: inset -10px 10px 0 10px #ccc;
-        animation: shake 1,25s cubic-bezier(.36,.07,.19,.97) infinite;
+        animation: shake 1.25s cubic-bezier(.36,.07,.19,.97) infinite;
         animation-play-state: paused;
 
     }
@@ -70,12 +84,12 @@ body{
        
     
 
-    .pokeball__button {
+      .pokeball__button {
         position: absolute;
         width: 30px;
         height: 30px;
         border: 4px solid #7f8c8d;
-        border-radius: -50%;
+        border-radius: 50%;
         top: calc(50% - 15px);
         left: calc(50% - 15px);
         box-shadow: 0 0 0 7px black;
