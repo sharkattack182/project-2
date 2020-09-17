@@ -53,6 +53,7 @@ module.exports = function(app) {
     }
   });
 
+  //gives us the first 151 pokemon as a list
   app.get("/api/all", (req, res) => {
     axios
       .get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151")
@@ -61,6 +62,7 @@ module.exports = function(app) {
       });
   });
 
+  //give us info on a specific pokemon
   app.get("/api/:pokemon", (req, res) => {
     const pokemon = req.params.pokemon;
     const queryURL =
