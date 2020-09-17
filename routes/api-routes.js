@@ -1,8 +1,16 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const axios = require("axios");
 
 module.exports = function(app) {
+  app.get("api/:pokemon", (req, res) => {
+    const pokemon = req.params.pokemon;
+    const queryURL = "https://pokeapi.co/api/v2/pokemon/" + pokemon + "/";
+    axios.get(queryURL).then(response => {
+      res.json(response.data);
+    });
+  });
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
