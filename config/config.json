@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "Starwood7!",
+    "password": "rootroot",
     "database": "passport_demo",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "Starwood7!",
+    "password": "rootroot",
     "database": "database_test",
     "host": "localhost",
     "dialect": "mysql"
