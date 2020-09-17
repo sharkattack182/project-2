@@ -1,3 +1,20 @@
-.body {
+.navbar {
     background-color: red;
+}
+
+html {
+    image-orientation: center;
+    background-color: red;
+}
+
+.container-fluid {
+    background-color: red;
+    
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
