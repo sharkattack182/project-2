@@ -1,6 +1,6 @@
 body{
     height:100vh;
-    background-color:red;
+    background-color:rgb(231, 148, 148);
     display: flex;
     justify-content: center;
     align-items: center;
