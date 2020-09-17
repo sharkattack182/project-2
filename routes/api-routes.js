@@ -65,7 +65,8 @@ module.exports = function(app) {
   //give us info on a specific pokemon
   app.get("/api/:pokemon", (req, res) => {
     const pokemon = req.params.pokemon;
-    const queryURL = "https://pokeapi.co/api/v2/pokemon-species/" + pokemon + "/";
+    const queryURL =
+      "https://pokeapi.co/api/v2/pokemon-species/" + pokemon + "/";
     axios.get(queryURL).then(response => {
       res.json(response.data);
     });
