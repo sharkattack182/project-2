@@ -1,6 +1,6 @@
 body{
     height:100vh;
-    background-color:rgb(231, 148, 148);
+    background-color:rgb(116, 111, 111);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,4 +106,8 @@ body{
     @keyframes blink {
         from { background: #eee;}
         to { background: #e74c3c;}
+    }
+
+    .has-text-centered {
+      color: #000;
     }
