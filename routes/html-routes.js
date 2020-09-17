@@ -27,7 +27,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/pokemon.html"));
   });
 
-  app.get("/:pokemon", (req, res) => {
+  app.get("/pokemons/:id", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/individual.html"));
   });
 };
