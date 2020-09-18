@@ -15,4 +15,20 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+    
+}
+
+.pikachu {
+    float: right;
+    margin: auto;
+    position: relative;
+    top: 130px;
+    
+}
+
+.jigglypuff {
+    position: relative;
+    top: 130px;
+    height: 450px;
+    margin-left: 70px;
 }
