@@ -11,5 +11,27 @@
 
 <!--each pokemon will hve name and number with picture and a button to add to your pokedex-->
 
+<script>
+    $.ajax({
+        url: "/api/all",
+        method: "GET"
+    })
+
+        .then(results => {
+            for (let i = 0; i < results.length; i++) {
+                const element = results[i];
+
+                const newLi = $("<li>");
+
+                const newLink = $("<a>").text(element.name);
+                newLink.attr("href", element.url);    
+                
+                newLi.append(newLink);
+                $("#pokemon").append(newLi);
+            }
+        })
+
+</script>
+
 </body>
 </html>
