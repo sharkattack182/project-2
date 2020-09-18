@@ -27,6 +27,13 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/pokemon.html"));
   });
 
+  app.get("/signup", (req, res) => {
+    if (req.user) {
+      res.redirect("/members");
+    }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
+
   app.get("/pokemons", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/individual.html"));
   });

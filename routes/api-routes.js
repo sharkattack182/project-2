@@ -3,9 +3,9 @@ const axios = require("axios");
 
 const db = require("../models");
 const passport = require("../config/passport");
-// const isAuthenticated = require("../config/middleware/isAuthenticated");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
@@ -65,9 +65,17 @@ module.exports = function(app) {
 
   //app.get("/api/pokemons", isAuthenticated, (req, res) => {
   app.get("/api/pokemons", (req, res) => {
-    //db.Pokemon.findAll({ where: { UserId: req.user.id }})
-    db.Pokemon.findAll({ where: { UserId: 1 } }).then(pokemons => {
-      res.json(pokemons);
+    // db.Pokemon.findAll({ where: { UserId: req.user.id }})
+    db.Pokemon.findAll({ where: { UserId: req.user.id } }).then(pokemons => {
+      const requests = pokemons.map(pokemon => {
+        return axios.get(
+          `https://pokeapi.co/api/v2/pokemon/${pokemon.pokemonId}`
+        );
+      });
+
+      Promise.all(requests).then(results => {
+        res.json(results.map(r => r.data));
+      });
     });
   });
 
@@ -75,21 +83,27 @@ module.exports = function(app) {
   app.post("/api/pokemons", (req, res) => {
     const pokemonId = req.body.pokemonId;
 
-    axios
-      .get("https://pokeapi.co/api/v2/pokemon/" + pokemonId)
-      .then(result => {
-        //console.log(result.data);
-        return db.Pokemon.create({
-          UserId: 1,
-          //UserId: req.user.id,
-          pokemonId: pokemonId,
-          name: result.data.name,
-          imageUrl: result.data.sprites.front_default
-        });
-      })
-      .then(newPokemon => {
-        res.json(newPokemon);
-      });
+    db.Pokemon.findAll({ where: { UserId: req.user.id } }).then(pokemons => {
+      if (pokemons.length >= 6) {
+        res.json({ message: "Limit exceeded" })
+      } else {
+        axios
+          .get("https://pokeapi.co/api/v2/pokemon/" + pokemonId)
+          .then(result => {
+            //console.log(result.data);
+            return db.Pokemon.create({
+              UserId: req.user.id,
+              //UserId: req.user.id,
+              pokemonId: pokemonId,
+              name: result.data.name,
+              imageUrl: result.data.sprites.front_default
+            });
+          })
+          .then(newPokemon => {
+            res.json(newPokemon);
+          });
+      }
+    })
   });
 
   //give us info on a specific pokemon

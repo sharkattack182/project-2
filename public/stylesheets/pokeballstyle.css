@@ -1,34 +1,12 @@
 body{
     height:100vh;
     background-color:rgb(116, 111, 111);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     }
 
-    img{
-        position: relative;
-        top: -82px;
-    }
-    
-    p{
-       position: relative;
-       top: 9rem;
-       font-size: 28px;
-       font-weight: 900;
-       letter-spacing: -2px;
-    }
-    
-
-    .child-to-body{
-        width: 300px;
-        height: 400px;
-        flex-shrink: 0;
-    }
 
     .poke_box{
         position: absolute;
-        top: 50%;
+        top: 100%;
         left: 50%;
         -webkit-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
