@@ -10,13 +10,24 @@ $(document).ready(() => {
     for (let i = 0; i < data.length; i++) {
       const element = data[i];
 
-      const newLi = $("<li>");
-      
+      const newPoke = $("<h2>");
+
       const newLink = $("<a>").text(element.name);
       newLink.attr("href", "/pokemons?id=" + element.id);
 
-      newLi.append(newLink);
-      $("#pokedex").append(newLi);
-  }
+      const newImg = $("<img>");
+      newImg.attr(
+        "src",
+        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
+          element.id +
+          ".png"
+      );
+      $(".imgs").append(newImg);
+      newImg.attr("height", "75px");
+
+      newPoke.append(newLink);
+      $("#pokedex").append(newPoke);
+      $("#pokedex").append(newImg);
+    }
   });
 });

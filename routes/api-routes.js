@@ -3,9 +3,9 @@ const axios = require("axios");
 
 const db = require("../models");
 const passport = require("../config/passport");
-const isAuthenticated = require("../config/middleware/isAuthenticated");
+// const isAuthenticated = require("../config/middleware/isAuthenticated");
 
-module.exports = function (app) {
+module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
@@ -85,7 +85,7 @@ module.exports = function (app) {
 
     db.Pokemon.findAll({ where: { UserId: req.user.id } }).then(pokemons => {
       if (pokemons.length >= 6) {
-        res.json({ message: "Limit exceeded" })
+        res.json({ message: "Limit exceeded" });
       } else {
         axios
           .get("https://pokeapi.co/api/v2/pokemon/" + pokemonId)
@@ -103,7 +103,7 @@ module.exports = function (app) {
             res.json(newPokemon);
           });
       }
-    })
+    });
   });
 
   //give us info on a specific pokemon
