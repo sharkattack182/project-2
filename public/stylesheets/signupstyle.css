@@ -1,9 +1,9 @@
-body,html {
+body {
     background-image: url(../img/Minimalist-pokemon-go-pokeball.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    margin-top: 0;
+    background-position: center
+    
 }
 
 .navbar {
@@ -12,6 +12,7 @@ body,html {
     background-repeat: no-repeat;
     height: 100px;
     background-color: #C12026;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
     position: relative;
 }

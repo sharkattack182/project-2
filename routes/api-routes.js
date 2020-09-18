@@ -3,7 +3,11 @@ const axios = require("axios");
 
 const db = require("../models");
 const passport = require("../config/passport");
+<<<<<<< HEAD
 const axios = require("axios");
+=======
+// const isAuthenticated = require("../config/middleware/isAuthenticated");
+>>>>>>> 524e67b1bf3bd7f6602b68fad2437a2017c53874
 
 module.exports = function(app) {
   app.get("api/:pokemon", (req, res) => {
@@ -16,8 +20,8 @@ module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
+  // Sending back a password, even a hashed password, isn't a good idea
   app.post("/api/login", passport.authenticate("local"), (req, res) => {
-    // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
       id: req.user.id
@@ -66,12 +70,41 @@ module.exports = function(app) {
     axios
       .get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151")
       .then(response => {
-        res.json(response.data);
+        res.json(response.data.results);
+      });
+  });
+
+  //app.get("/api/pokemons", isAuthenticated, (req, res) => {
+  app.get("/api/pokemons", (req, res) => {
+    //db.Pokemon.findAll({ where: { UserId: req.user.id }})
+    db.Pokemon.findAll({ where: { UserId: 1 } }).then(pokemons => {
+      res.json(pokemons);
+    });
+  });
+
+  //app.post("/api/pokemons", isAuthenticated, (req, res) => {
+  app.post("/api/pokemons", (req, res) => {
+    const pokemonId = req.body.pokemonId;
+
+    axios
+      .get("https://pokeapi.co/api/v2/pokemon/" + pokemonId)
+      .then(result => {
+        //console.log(result.data);
+        return db.Pokemon.create({
+          UserId: 1,
+          //UserId: req.user.id,
+          pokemonId: pokemonId,
+          name: result.data.name,
+          imageUrl: result.data.sprites.front_default
+        });
+      })
+      .then(newPokemon => {
+        res.json(newPokemon);
       });
   });
 
   //give us info on a specific pokemon
-  app.get("/api/:pokemon", (req, res) => {
+  app.get("/api/pokemons/:pokemon", (req, res) => {
     const pokemon = req.params.pokemon;
     const queryURL =
       "https://pokeapi.co/api/v2/pokemon-species/" + pokemon + "/";
