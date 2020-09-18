@@ -1,0 +1,17 @@
+body,html {
+    background-image: url(../img/Minimalist-pokemon-go-pokeball.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 0;
+}
+
+.navbar {
+    background-image: url(../img/signup.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+    background-color: #C12026;
+    margin-bottom: 0;
+    position: relative;
+}
