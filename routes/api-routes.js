@@ -59,7 +59,7 @@ module.exports = function(app) {
     axios
       .get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151")
       .then(response => {
-        res.json(response.data);
+        res.json(response.data.results);
       });
   });
 
