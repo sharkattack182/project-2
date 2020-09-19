@@ -23,7 +23,7 @@ $(document).ready(() => {
           ".png"
       );
       $(".imgs").append(newImg);
-      newImg.attr("height", "75px");
+      newImg.attr("height", "70px");
 
       newPoke.append(newLink);
       $("#pokedex").append(newPoke);
