@@ -1,13 +1,16 @@
-body {
-    background-image: url(../img/Minimalist-pokemon-go-pokeball.jpg);
+.body {
+    background-image: url(../img/pokemon-ruby.gif);
     background-repeat: no-repeat;
+    background-position: inherit;
+    margin: auto;
     background-size: cover;
-    background-position: center
+    background-clip: border-box;
+    
     
 }
 
 .navbar {
-    background-image: url(../img/signup.png);
+    background-image: url(../img//pokemon-ruby.gif);
     background-position: center;
     background-repeat: no-repeat;
     height: 100px;
@@ -18,17 +21,6 @@ body {
     
 }
 
-.pikachu {
-    float: right;
-    margin: auto;
-    position: relative;
-    top: 130px;
-    
-}
-
-.jigglypuff {
-    position: relative;
-    top: 130px;
-    height: 450px;
-    margin-left: 70px;
+.signup {
+    margin-top: 200px;
 }
