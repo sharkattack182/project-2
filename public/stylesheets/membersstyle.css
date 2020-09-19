@@ -1,14 +1,21 @@
 .navbar {
-    background-color: red;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
-html {
-    image-orientation: center;
-    background-color: red;
-}
 
-.container-fluid {
-    background-color: red;
+.body {
+    background-image: url(../img/memberspagebackground.png);
+    background-repeat: no-repeat;
+    max-width: 100%;
+    background-clip: border-box;
+    height: auto;
     
 }
 
