@@ -9,21 +9,22 @@ $(document).ready(() => {
     console.log(data);
     for (let i = 0; i < data.length; i++) {
       const element = data[i];
-
+      const newImg = $("<img>");
+      newImg.attr({
+        src:
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
+          element.id +
+          ".png",
+        class: "card-img-top"
+      });
       const newPoke = $("<h2>");
 
       const newLink = $("<a>").text(element.name);
       newLink.attr("href", "/pokemons?id=" + element.id);
 
-      const newImg = $("<img>");
-      newImg.attr(
-        "src",
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" +
-          element.id +
-          ".png"
-      );
-      $(".imgs").append(newImg);
-      newImg.attr("height", "70px");
+
+
+      $(".img").append(newImg);
 
       newPoke.append(newLink);
       $("#pokedex").append(newPoke);

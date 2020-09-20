@@ -5,16 +5,13 @@
 }
 .tan {
     background-color: rgb(248, 248, 248);
-    margin-left: 75px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
     padding-top: 25px;
+    margin-bottom: 30px;
 }
 .jumbotron {
     margin: 0 !important;
     background-color: rgb(248, 248, 248) !important;
-}
-img {
-    padding-bottom: 20px;
-    margin-bottom: 15px;
-    margin-top: 20px;
 }
