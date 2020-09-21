@@ -58,6 +58,20 @@
                 $(".attackOne").text("Attack: " + result.moves[0].move.name);
                 $(".attackTwo").text("Attack: " + result.moves[1].move.name);
                 $(".attackThree").text("Attack: " + result.moves[2].move.name);
+            });
+
+
+            $("#add-pokemon").on("click", function(event) {
+                $ajax({
+                    url: "api/pokemons",
+                    method: "POST",
+                    data: {
+                        pokemonId: pokemonId
+                    }
+                }).then(result => {
+                    alert("Pokemon" + pokemonId + "added to your Pokedex.");
+                    console.log(result);
+                })
             })
     </script>
 </body>
