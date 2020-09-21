@@ -3,11 +3,8 @@ const axios = require("axios");
 
 const db = require("../models");
 const passport = require("../config/passport");
-<<<<<<< HEAD
-const axios = require("axios");
-=======
+
 // const isAuthenticated = require("../config/middleware/isAuthenticated");
->>>>>>> 524e67b1bf3bd7f6602b68fad2437a2017c53874
 
 module.exports = function(app) {
   app.get("api/:pokemon", (req, res) => {
