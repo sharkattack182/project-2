@@ -42,7 +42,7 @@ $(document).ready(() => {
       $("#" + i).append(cardBody);
       $("." + i).append(newPoke);
       $("." + i).append(newButton);
-      $("." + i).append(deleteButton);
+      // $("." + i).append(deleteButton);
     }
   });
   // $(".delete").on("click", function(event) {
