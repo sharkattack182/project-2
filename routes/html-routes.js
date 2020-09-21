@@ -9,7 +9,7 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    res.sendFile(path.join(__dirname, "../public/pokemon.html"));
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
   app.get("/login", (req, res) => {
@@ -25,6 +25,13 @@ module.exports = function(app) {
 
   app.get("/all", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/pokemon.html"));
+  });
+
+  app.get("/signup", (req, res) => {
+    if (req.user) {
+      res.redirect("/members");
+    }
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
 
   app.get("/pokemons", (req, res) => {
