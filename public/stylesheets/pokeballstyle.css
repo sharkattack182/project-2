@@ -1,6 +1,6 @@
 body{
     height:100vh;
-    background-color:rgb(116, 111, 111);
+    background-color: #dc3545;
     }
     /* had to make this div to position the pokebox using absolute so it would be based off this divs positions instead of the body */
     .relative {

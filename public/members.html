@@ -2,19 +2,22 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Pokedex User Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link href="stylesheets/members.css" rel="stylesheet">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-    <a class="navbar-brand" href="/members"><a href="/members"><img src="https://fontmeme.com/permalink/200920/eac7f3bbe2180250c46549b455672234.png" alt="pokemon-font" border="0"></a></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="/members"><a href="/members"><img
+          src="https://fontmeme.com/permalink/200920/eac7f3bbe2180250c46549b455672234.png" alt="pokemon-font"
+          border="0"></a></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -31,33 +34,37 @@
       </ul>
     </div>
   </nav>
+
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Welcome <span class="member-name"></span></h1>
-      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      <p class="lead">This is a place you to view and store your favorite pokemon there is only room for six though so choose wisely!.</p>
     </div>
   </div>
+
   <div class="red">
     <div class="row">
-        <div class="col-md-8 tan">
-            <div id="pokedex" class="card" style="width: 18rem;">
-              <!-- img class="card-img-top" -->
-              <!--  div.card-body -->
-              <!--  h5 class card-title append to card-body -->
-              <!-- a href. newlink class" btn btn-primary .text(pokePage) -->
-        </div>
-    </div>
+      <div class="col-md-8 tan text-center">
+        <h2>My Pokemon</h2>
+        <div id="0" class="card" style="width: 18rem;"></div>
+        <div id="1" class="card" style="width: 18rem;"></div>
+        <div id="2" class="card" style="width: 18rem;"></div>
+        <div id="3" class="card" style="width: 18rem;"></div>
+        <div id="4" class="card" style="width: 18rem;"></div>
+        <div id="5" class="card" style="width: 18rem;"></div>
+      </div>
 
-
-
-
-
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script type="text/javascript" src="js/members.js"></script>
 
 </body>
 

@@ -17,18 +17,25 @@ $(document).ready(() => {
           ".png",
         class: "card-img-top"
       });
-      const newPoke = $("<h2>");
 
-      const newLink = $("<a>").text(element.name);
-      newLink.attr("href", "/pokemons?id=" + element.id);
+      const cardBody = $("<div>");
+      const newPoke = $("<h3>");
+      const newButton = $("<a>").text("PokePage");
 
+      newButton.attr("href", "/pokemons?id=" + element.id);
+      cardBody.attr({
+        class: "card-body",
+        class: i
+      });
+      cardBody.attr("class", i);
+      newPoke.attr("class", "card-title");
+      newPoke.text(element.name);
+      newButton.attr("class", "btn btn-primary");
 
-
-      $(".img").append(newImg);
-
-      newPoke.append(newLink);
-      $("#pokedex").append(newPoke);
-      $("#pokedex").append(newImg);
+      $("#" + i).append(newImg);
+      $("#" + i).append(cardBody);
+      $("." + i).append(newPoke);
+      $("." + i).append(newButton);
     }
   });
 });
