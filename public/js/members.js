@@ -21,14 +21,14 @@ $(document).ready(() => {
       const cardBody = $("<div>");
       const newPoke = $("<h3>");
       const newButton = $("<a>").text("PokePage");
-      let deleteButton = $("<a>").text("Delete");
+      // let deleteButton = $("<a>").text("Delete");
 
       newButton.attr("href", "/pokemons?id=" + element.id);
-      deleteButton.attr({
-        class: "delete",
-        id: i,
-        class: "btn btn-danger"
-      })
+      // deleteButton.attr({
+      //   class: "delete",
+      //   id: i,
+      //   class: "btn btn-danger"
+      // })
       cardBody.attr({
         class: "card-body",
         class: i
@@ -45,18 +45,18 @@ $(document).ready(() => {
       $("." + i).append(deleteButton);
     }
   });
-  $(".delete").on("click", function(event) {
-    const id = $(this).data("id");
-    $ajax({
-      url: "/api/pokemons/",
-      method: "DELETE",
-    }).then(result => {
-      console.log(result);
-    });
-    swal({
-      title: "Congrats!",
-      text: "This pokemon has been deleted from your your pokedex!",
-      type: "success"
-    });
-  });
+  // $(".delete").on("click", function(event) {
+  //   const id = $(this).data("id");
+  //   $ajax({
+  //     url: "/api/pokemons/",
+  //     method: "DELETE",
+  //   }).then(result => {
+  //     console.log(result);
+  //   });
+  //   swal({
+  //     title: "Congrats!",
+  //     text: "This pokemon has been deleted from your your pokedex!",
+  //     type: "success"
+  //   });
+  // });
 });
