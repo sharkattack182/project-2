@@ -8,7 +8,7 @@
     * Juan Flores
     * Chris Collins
 
-*Technologies used
+* Technologies used
     * Sequalize 
     * Bulma
 
