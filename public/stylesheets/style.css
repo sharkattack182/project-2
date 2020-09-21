@@ -3,6 +3,10 @@ form.login {
   margin-top: 50px;
 }
 
+.row {
+  margin-right: 0;
+}
+
 .red{
   background-color:  #dc3545;
   height: 100vh;
