@@ -1,43 +1,33 @@
 body{
     height:100vh;
-    background-color:rgb(116, 111, 111);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #dc3545;
     }
-
-    img{
+    /* had to make this div to position the pokebox using absolute so it would be based off this divs positions instead of the body */
+    .relative {
         position: relative;
-        top: -82px;
-    }
-    
-    p{
-       position: relative;
-       top: 9rem;
-       font-size: 28px;
-       font-weight: 900;
-       letter-spacing: -2px;
-    }
-    
+        width: 50vw;   
+        /* the width is set to 50% of the view width so no matter how wide the screen is the button positions itself */
+        height: 200px;
+        /* border: 3px solid #73AD21; this is really just to refrence how the div is used to position the next few divs */
 
-    .child-to-body{
-        width: 300px;
-        height: 400px;
-        flex-shrink: 0;
     }
-
     .poke_box{
+        /* this one we posiition absolute with no space on the top or right side which positions it in the top right corner */
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 0px;
+        right: 0px;
         -webkit-transform: translate(-50%,-50%);
         transform: translate(-50%,-50%);
     }
 
     .pokeball{
-        position: relative;
-        width: 150px;
-        height: 150px;
+        /* same as above except this time i use right =-50px (half the width of the pokeball) to position the center of tghe ball on the center of the relativ div line
+        probably not the most effective way of going about it but it stays centered snd itsnt disproportionate */
+        position: absolute;
+        top: 0px;
+        right: -50px;
+        width: 100px;
+        height: 100px;
         background: #fff;
         border: 5px solid #000;
         border-radius: 50%;
@@ -108,6 +98,3 @@ body{
         to { background: #e74c3c;}
     }
 
-    .has-text-centered {
-      color: #000;
-    }
