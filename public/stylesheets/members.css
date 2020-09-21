@@ -1,7 +1,9 @@
 .red {
     height: 100%;
     width: 100vw;
-    background-color: #dc3545;
+    background-image: url(../imgs/screen.gif), url(../imgs/venusaur-mega.gif);
+    
+    
 }
 .tan {
     background-color:rgb(248, 248, 248);
@@ -31,3 +33,11 @@
 h2 {
     color: #dc3545;
 }
+
+.saved {
+   
+   background-color: #dc3545 ;
+   background-repeat: no-repeat;
+
+}
+
