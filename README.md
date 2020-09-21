@@ -8,6 +8,10 @@
     * Juan Flores
     * Chris Collins
 
+*Technologies used
+    * Sequalize 
+    * Bulma
+
 * https://github.com/sharkattack182/project-2
 * 
 
