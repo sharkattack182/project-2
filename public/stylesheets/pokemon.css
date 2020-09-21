@@ -12,7 +12,8 @@
 }
 .jumbotron {
     margin: 0 !important;
-    background-color: rgb(248, 248, 248) !important;
+    background-image: url(../imgs/Pokemon-The-First-Movie-HD-Wallpaper-Background-Image-.png);
+    background-size: cover;
 }
 img {
     padding-bottom: 20px;
