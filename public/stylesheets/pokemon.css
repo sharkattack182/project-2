@@ -9,11 +9,17 @@
     margin-top: 30px;
     padding-top: 25px;
     border-radius: 25px;
+    margin-bottom: 200px;
 }
 .jumbotron {
     margin: 0 !important;
+<<<<<<< HEAD
     background-image: url(../imgs/pokemon-forest.gif);
     
+=======
+    background-image: url(../imgs/Pokemon-The-First-Movie-HD-Wallpaper-Background-Image-.png);
+    background-size: cover;
+>>>>>>> e35887dc6dcef9ca45f93d2730a66c7512d0337f
 }
 img {
     padding-bottom: 20px;
