@@ -43,3 +43,9 @@ h2 {
 nav {
     width: 100vw;
 }
+
+.row{
+    background-image: url("../imgs/screen.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
